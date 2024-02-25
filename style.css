@@ -1,0 +1,103 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.container {
+    position: relative;
+    width: 360px;
+    min-height: 500px;
+    background: teal;
+    border-radius: 10px;
+    box-shadow: 10px 10px 35px gray;
+}
+
+.title {
+    color: whitesmoke;;
+    font-size: 1.9rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.container .list {
+    position: relative;
+    display: flex;
+    margin: 20px 8px;
+    cursor: pointer;
+}
+.container .list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 25px;
+    height: 40px;
+    background: tomato;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    transition: .4s;
+}
+.container .list:hover::before{
+    width: 85%;
+}
+.container .list:hover .tutorial {
+    color: black;
+}
+
+.container .list .rank {
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    background: tomato;
+    border-radius: 5px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.5rem;    
+}
+
+.container .list .rank::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: rgb(23, 28, 28);
+    border-radius: 5px;
+    transform: scale(0);
+    transition: .5s;
+}
+.container .list:hover .rank::before {
+    transform: scale(1);
+}
+
+.list .rank span {
+    position: relative;
+    color: whitesmoke;
+}
+
+.list .tutorial {
+    position: relative;
+    padding: 0 .8rem;
+    color: whitesmoke;
+    margin-top: 2px;
+}
+
+.list .tutorial p {
+    font-family: arial;
+    font-weight: light;
+    font-size: .9rem;
+}
